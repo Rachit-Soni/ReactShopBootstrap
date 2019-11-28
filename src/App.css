@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat&display=swap');
+
+
+.navBar{
+  padding: 20px;
+  display:flex;
+  min-height: 10vh;
+  background: black;
+  color: white;
+  opacity: 0.9;
+  position: sticky;
+}
+
+.navLogo{
+
+  text-decoration: none;
+  color: white;
+
+}
+
+.btnShop{
+
+  margin-left: 1080px;
+
+}
+
+.littleNav{
+  width: 100%;
+  background: rgb(6, 99, 240);
+}
+.littleNavText{
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif; /* non-heading font*/
+
+}
