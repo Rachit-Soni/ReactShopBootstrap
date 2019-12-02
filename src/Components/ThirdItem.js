@@ -33,16 +33,29 @@ export default class ThirdItem extends Component {
             <div>
             {   this.state.loading || !this.state.thirdApiData? (<div>Loading...</div>): (
                     <div>
-                        <h3> {this.state.thirdApiData.name} </h3>
-                        <p>{this.state.thirdApiData.description}</p>
-                        <img alt = "secondProduct" src= {this.state.thirdApiData.master.images[0]["product_url"]} />
-                        <p>Price: {this.state.thirdApiData.price}$</p>
-                        <input type = "number" name="quantity" min="1" max="5" onChange={updateItem}></input>    
-                        <button className="cartButton" onClick={btnCart}>Add to Cart</button>   
-                        <br />
+                        <div className="container">
+                            <div className="row">
+                            <div className="col-md-3"> 
+                                <img alt = "secondProduct" src= {this.state.thirdApiData.master.images[0]["product_url"]} />
+                            </div>
+                            <div className="col-md-5"> 
+                                <h3> {this.state.thirdApiData.name} </h3>
+                                <p>{this.state.thirdApiData.description}</p>
+                            </div>
+                            <div className="col-md-1">
+                                <div className = "vl"> </div>
+                            </div>
+                            <div className="col-md-3">
+                            <p>Price: {this.state.thirdApiData.price}$</p>
+                                <input type = "number" name="quantity" min="1" max="5" onChange={updateItem}></input>    
+                                <button className="cartButton" onClick={btnCart}>Add to Cart</button>   
+                            
+                            </div>   
+                                <br />
+                            </div>
+                        </div>
                     </div>
                 )}
-                <hr/>
             </div>
         )
     }

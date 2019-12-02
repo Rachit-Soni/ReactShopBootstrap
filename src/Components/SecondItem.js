@@ -32,15 +32,28 @@ export default class SecondItem extends Component {
         return (
             <div>
             {   this.state.loading || !this.state.secondApiData? (<div>Loading...</div>): (
-                    <div>
-                        <h3> {this.state.secondApiData.name} </h3>
-                        <p>{this.state.secondApiData.description}</p>
-                        <img alt = "secondProduct" src= {this.state.secondApiData.master.images[0]["product_url"]} />
-                        <p>Price: {this.state.secondApiData.price}$</p>
-                        <input type = "number" name="quantity" min="1" max="5" onChange={updateItem}></input>    
-                        <button className="cartButton" onClick={btnCart}>Add to Cart</button>   
-                        <br />
-                    </div>
+                <div>
+                    <div className="container">
+                        <div className="row"> 
+                            <div className="col-md-3">
+                                <img alt = "secondProduct" src= {this.state.secondApiData.master.images[0]["product_url"]} />
+                            </div>
+                            <div className="col-md-5">
+                                <h3> {this.state.secondApiData.name} </h3>
+                                <p>{this.state.secondApiData.description}</p>
+                            </div>
+                            <div className="col-md-1">
+                                <div className="vl"></div>    
+                            </div>
+                            <div className="col-md-3">
+                                <p>Price: {this.state.secondApiData.price}$</p>
+                                <input type = "number" name="quantity" min="1" max="5" onChange={updateItem}></input>    
+                                <button className="cartButton" onClick={btnCart}>Add to Cart</button>   
+                                <br />
+                            </div>    
+                        </div>
+                    </div>    
+                </div>
                 )}
                 <hr/>
             </div>

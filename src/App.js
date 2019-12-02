@@ -4,6 +4,7 @@ import Items from './Components/Items';
 import FirstItem from './Components/FirstItem'
 import SecondItem from './Components/SecondItem'
 import ThirdItem from './Components/ThirdItem'
+import Accessories from './Components/Accessories'
 import './App.css';
 export class App extends Component {
   render() {
@@ -11,10 +12,10 @@ export class App extends Component {
 
     return (
       <div>
-        <Nav /> 
+        <Nav />
         <FirstItem />
         <SecondItem />
-        <ThirdItem />
+        <ThirdItem /> 
       </div>
     )
   }

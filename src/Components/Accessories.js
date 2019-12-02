@@ -1,8 +1,9 @@
+// This is a component for testing purpose. Not used in main component
 
 
 import React, { Component } from 'react'
 
-export default class FirstItem extends Component {
+export default class Accessories extends Component {
     
     state = {
                 loading: true,
@@ -19,7 +20,7 @@ export default class FirstItem extends Component {
         const url = 'https://api.myjson.com/bins/1hj9cq';
         const response = await fetch (url);
         const data = await response.json();
-        this.setState({firstApiData: data.products[0], loading: false})
+        this.setState({firstApiData: data.products, loading: false})
         //console.log(this.state.firstApiData);
     }
 
@@ -73,7 +74,7 @@ export default class FirstItem extends Component {
                             <br / ><br /> 
                             <div className ="row">
                                 <div className="col-md-3">
-                                <img alt = "FirstProduct" src= {this.state.firstApiData.master.images[1]["product_url"]} />
+                                <img alt = "FirstProduct" src= {this.state.firstApiData.master.images[0]["product_url"]} />
                                 </div>
                                 <div className="col-md-5">
                                 <h3> {this.state.firstApiData.name} </h3>
