@@ -45,10 +45,10 @@ export default class ThirdItem extends Component {
                             <div className="col-md-1">
                                 <div className = "vl"> </div>
                             </div>
-                            <div className="col-md-3">
-                            <p>Price: {this.state.thirdApiData.price}$</p>
+                            <div className="col-md-3 priceAndButton">
+                            <b>Price: {this.state.thirdApiData.price}$</b>
                                 <input type = "number" name="quantity" min="1" max="5" onChange={updateItem}></input>    
-                                <button className="cartButton" onClick={btnCart}>Add to Cart</button>   
+                                <button className="btn btn-primary btnStyle" onClick={btnCart}>Add to Cart</button>   
                             
                             </div>   
                                 <br />

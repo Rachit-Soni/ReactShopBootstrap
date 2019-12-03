@@ -14,8 +14,7 @@ export class App extends Component {
       <div>
         <Nav />
         <FirstItem />
-        <SecondItem />
-        <ThirdItem /> 
+        <Accessories />
       </div>
     )
   }

@@ -82,10 +82,11 @@ export default class FirstItem extends Component {
                                 <div className="col-md-1">
                                 <div className="vl"></div>    
                                 </div>
-                                <div className="col-md-3">
-                                <p>Price: {this.state.firstApiData.price}$</p>
-                                <input type = "number" name="quantity" min="1" max="5" onChange={this.updateItem}></input>    
-                                <button className="cartButton" onClick={this.btnCart}>Add to Cart</button>   
+                                <div className="col-md-3 priceAndButton">
+                                <b className= "priceStyle">Price: {this.state.firstApiData.price}$</b> 
+                                <input type = "number" name="quantity" min="1" max="5" onChange={this.updateItem}></input>
+                                    
+                                <button className="btn btn-primary btnStyle" onClick={this.btnCart}>Add to Cart</button>   
                                 </div>
 
                             <br />

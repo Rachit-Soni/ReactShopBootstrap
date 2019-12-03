@@ -18,12 +18,6 @@
 
 }
 
-.btnShop{
-
-  margin-left: 1080px;
-
-}
-
 .littleNav{
   width: 100%;
   background: rgb(6, 99, 240);
@@ -42,4 +36,21 @@
 
 hr{
   width: 80%;
+}
+
+.priceStyle{
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.btnStyle{
+
+  margin-top: 20px;
+  width: 250px
+
+}
+
+.priceAndButton{
+
+  text-align: center;
 }

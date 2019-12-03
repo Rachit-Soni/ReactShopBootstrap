@@ -41,7 +41,7 @@ return (
               <div className="shopItemStyle">
                   <h4> {item.name}<br /> </h4>
                   <p>{item.description}<br /><br /></p>
-                  <img alt="Product" src= {item.master.images[0]["product_url"]  }/>
+                  <img alt="Product" src= {item.master.images[0]["product_url"]}/>
                   <p>Price {item.price} </p>
                   <div>
                   <input type = "number" name="quantity" min="1" max="5" onChange={updateItem}></input>    
