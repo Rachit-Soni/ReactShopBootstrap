@@ -7,14 +7,36 @@ import ThirdItem from './Components/ThirdItem'
 import Accessories from './Components/Accessories'
 import './App.css';
 export class App extends Component {
-  render() {
 
+  constructor(){
+    super();
+       
+  }
+
+ 
+  state ={
+    cartItem:0
+  };
+
+  handlerCartAddition = (noOfitems) =>{
+
+      console.log("type:"+typeof(this.state.cartItem)) ;
+      console.log("type"+typeof(noOfitems));   
+      let totalItems = this.state.cartItem+noOfitems;
+      
+      this.setState({cartItem:totalItems});
+      
+  }
+  render() {
+    console.log("Rachit:"+this.state.cartItem);
 
     return (
       <div>
         <Nav />
-        <FirstItem />
-        <Accessories />
+       {/*  <FirstItem 
+        handlerCartAddition={this.handlerCartAddition}
+        /> */}
+        <Accessories /> 
       </div>
     )
   }

@@ -6,10 +6,10 @@ function Nav() {
             <div className = "navBar">
                 <a className= "navLogo" href = "https://www.invisalign.com">Invisalign</a>
                 <div className = "cLogo">
+            </div>
 
-                </div>
                 <div className="navButtons">
-                <a className = "btnShop" href = "#"> <img src = "./Images/cart.png"  alt="Cart"/> </a>
+                  <a className = "btnShop" href = "#"> <img src = "./Images/cart.png"  alt="Cart"/> </a>
                 </div>
                
             </div>

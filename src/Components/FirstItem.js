@@ -25,11 +25,7 @@ export default class FirstItem extends Component {
 
 
     //Functions
- qty = 1;
-    updateItem = (event) =>{
-        ++this.qty;
-        console.log(this.qty);
-    }
+   
 
 
    btnCart = (event) => {
@@ -61,7 +57,7 @@ export default class FirstItem extends Component {
 
     render() {
 
-      
+      let qty = 1;
         
 
         return (
@@ -84,9 +80,12 @@ export default class FirstItem extends Component {
                                 </div>
                                 <div className="col-md-3 priceAndButton">
                                 <b className= "priceStyle">Price: {this.state.firstApiData.price}$</b> 
-                                <input type = "number" name="quantity" min="1" max="5" onChange={this.updateItem}></input>
+                                <input type = "number" name="quantity" onChange={(event)=>{
+                                    this.qty=Number(event.target.value);
+                                        console.log("this.qty"+typeof(this.qty));
+                                    return this.qty}}></input>
                                     
-                                <button className="btn btn-primary btnStyle" onClick={this.btnCart}>Add to Cart</button>   
+                                <button className="btn btn-primary btnStyle" onClick={()=>this.props.handlerCartAddition(this.qty)}>Add to Cart</button>   
                                 </div>
 
                             <br />
