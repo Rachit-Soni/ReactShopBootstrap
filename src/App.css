@@ -3,24 +3,31 @@
 
 .navBar{
   padding: 20px;
-  display:flex;
   min-height: 10vh;
   background: black;
   color: white;
   opacity: 0.89;
 }
 
-.navButtons{
-  text-align: right;
-  align-items: right;
-}
+
 
 .navLogo{
 
   text-decoration: none;
   color: white;
-
+  font-size: 150%;
+  
 }
+
+.cartImage{
+  display: inline-flex;
+  float: right;
+  
+}
+
+.cartImg{
+  width: 40px;
+float: right}
 
 .littleNav{
   width: 100%;
@@ -75,9 +82,16 @@ hr{
 
 .r1{
   margin-top: 7%;
+  
 }
 
 .c1{
   font-family: 'Montserrat', sans-serif; /* non-heading font*/
 
+}
+
+
+.cartHeading {
+  text-align: center;
+    
 }

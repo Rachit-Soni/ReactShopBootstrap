@@ -8,7 +8,12 @@ state = {
             apiData0: [],
             apiData1: [],
             apiData2: [],
-            cartState: []
+            cartState: [
+                        {itemPrice: null},
+                        {itemName: ''}
+            ],
+            inputNumber: 1,
+            inputValue: 0
 
         }
 
@@ -33,10 +38,34 @@ async componentDidMount()
        // console.log(this.state.apiData0.master.images[0]["product_url"])      
       
 }
-        
+      
+//Functions
+//Input Text Function
+handleNumberChange = (event) => {
+        this.setState({inputNumber: event.target.value})
+
+        console.log("Input Number: " + this.state.inputNumber )  //tried tp add +1 but it is taking the variable as a string
+
+}
+
+//Add to Cart Button
+
+addToCartHandler = (noOfItems) => {
+    console.log("Button Clicked!!")
+
+    let btn = this.state.inputNumber;
+    
+    this.setState(
+       
+           { inputValue: this.btn }               //UNABLE TO CHANGE THE STATE HERE CAUSING THE MAJOR CART LOGIC PROBLEM
+               )
+    console.log(this.state.inputValue)        
+
+}
+
+
     render()
      {
-      
       return (
             <div>
                 {   this.state.loading || !this.state.apiData0 ? (<div>loading...</div>) : 
@@ -58,9 +87,9 @@ async componentDidMount()
                                 </div>
                                 <div className="col-md-3">
                                     <b>Price: ${this.state.apiData0.price}</b>
-                                    <input type = "number" className="inputNumber" />
+                                    <input type = "number" className="inputNumber" min="1" value={this.state.inputNumber} onChange={this.handleNumberChange}/>
                                     <br />
-                                    <button className="btn btn-primary addToCartButton">Add to Cart</button>
+                                    <button className="btn btn-primary addToCartButton" onClick={this.addToCartHandler}>Add to Cart</button>
                                 </div>
 
                                 
@@ -81,9 +110,9 @@ async componentDidMount()
                                 </div>
                                 <div className="col-md-3">
                                     <b>Price: ${this.state.apiData1.price}</b>
-                                    <input type = "number" className="inputNumber" />
+                                    <input type = "number" className="inputNumber" min="1"/>
                                     <br />
-                                    <button className="btn btn-primary addToCartButton">Add to Cart</button>
+                                    <button className="btn btn-primary addToCartButton" onClick={this.addToCartHandler}>Add to Cart</button>
                                 </div>
 
                                 
@@ -104,9 +133,9 @@ async componentDidMount()
                                 </div>
                                 <div className="col-md-3">
                                     <b>Price: ${this.state.apiData2.price}</b>
-                                    <input type = "number" className="inputNumber" />
+                                    <input type = "number" className="inputNumber" min="1" />
                                     <br />
-                                    <button className="btn btn-primary addToCartButton">Add to Cart</button>
+                                    <button className="btn btn-primary addToCartButton" onClick={this.addToCartHandler}>Add to Cart</button>
                                 </div>
 
                                 

@@ -2,10 +2,12 @@ import React, { Component } from 'react';
 import Nav from './Components/Nav';
 import Items from './Components/Items';
 import FirstItem from './Components/FirstItem'
-import SecondItem from './Components/SecondItem'
-import ThirdItem from './Components/ThirdItem'
 import Accessories from './Components/Accessories'
+import Cart from './Components/Cart'
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+
+
 export class App extends Component {
 
   constructor(){
@@ -31,13 +33,22 @@ export class App extends Component {
     console.log("Rachit:"+this.state.cartItem);
 
     return (
+              <Router>
+
       <div>
         <Nav />
+            <Switch>
+            
+          <Route path = "/Cart" exact component = {Cart} />
+            
        {/*  <FirstItem 
         handlerCartAddition={this.handlerCartAddition}
         /> */}
         <Accessories /> 
+          </Switch>
       </div>
+            </Router>  
+
     )
   }
 }
